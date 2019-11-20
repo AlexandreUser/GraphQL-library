@@ -4,11 +4,13 @@ function DefineSchema(){
 	let schema = null
 	schema = buildSchema( ` 
 		type MainQuery {
+			libraryName: String
 			library: [String!]!
 			datetime: [String!]!
 			quantity: [Int!]!
 		}
 		type MainMutation {
+			recordLibraryName(libraryName:String): String
 			recordBook(title:String): String
 			recordDate(datetime:String): String
 			recordQuantity(quantity:Int): Int
@@ -32,7 +34,11 @@ function GetQuantity(){
 	return [10,3,20]
 
 }
+function GetName(){
+	return "My own GraphQl library"
+}
 exports.DefineSchema = DefineSchema;
 exports.GetLibrary = GetLibrary;
 exports.GetDate = GetDate;
 exports.GetQuantity = GetQuantity;
+exports.GetName = GetName;
