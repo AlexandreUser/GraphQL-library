@@ -6,10 +6,12 @@ function DefineSchema(){
 		type MainQuery {
 			library: [String!]!
 			datetime: [String!]!
+			quantity: [Int!]!
 		}
 		type MainMutation {
 			recordBook(title:String): String
 			recordDate(datetime:String): String
+			recordQuantity(quantity:Int): Int
 		}
 		schema {
 			query:MainQuery
@@ -26,6 +28,11 @@ function GetDate(){
 		return ["2009","2004","2011"]
 
 }
+function GetQuantity(){
+	return [10,3,20]
+
+}
 exports.DefineSchema = DefineSchema;
 exports.GetLibrary = GetLibrary;
 exports.GetDate = GetDate;
+exports.GetQuantity = GetQuantity;
