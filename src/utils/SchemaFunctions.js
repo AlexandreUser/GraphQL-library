@@ -44,7 +44,7 @@ function GetName(){
 	return "My own GraphQl library"
 }
 function GetUser(){
-	return [{"name":"Alexander","Books":["Harry potter e a camara secreta"]}]
+	return [{"name":"Alexander","Books":["Harry potter e a camara secreta"]},{"name":"Vanessa","Books":["O nome do vento"]}]
 }
 exports.DefineSchema = DefineSchema;
 exports.GetLibrary = GetLibrary;
