@@ -1,0 +1,27 @@
+{
+  "name": "graphql_studies",
+  "version": "1.0.0",
+  "description": "A simple GraphQL API",
+  "main": "index.js",
+  "scripts": {
+    "test": "cd src && node index.js"
+  },
+  "keywords": [
+    "GraphQL",
+    "API",
+    "DB",
+    "Database",
+    "Graph",
+    "Node",
+    "Express"
+  ],
+  "author": "Alexandre Vieira",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.8",
+    "mongoose": "^5.7.12"
+  }
+}
