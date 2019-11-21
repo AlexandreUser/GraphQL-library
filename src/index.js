@@ -17,7 +17,7 @@ app.use("/graphql",graphqlHTTP({
 		rootValue:{
 			users:GetUser(),
 			libraryName:GetName(),
-			library:GetLibrary(),
+			Books:GetLibrary(),
 			datetime:GetDate(),
 			quantity:GetQuantity()
 		},

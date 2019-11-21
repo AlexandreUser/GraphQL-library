@@ -6,9 +6,12 @@ function DefineSchema(){
 		type MainQuery {
 			users: [ListOfUsers]
 			libraryName: String
-			library: [String!]!
+			Books:[LibraryOwn]
 			datetime: [String!]!
-			quantity: [Int!]!
+		}
+		type LibraryOwn{
+			name:String
+			quantity:Int
 		}
 		type ListOfUsers{
 			name:String
@@ -16,7 +19,7 @@ function DefineSchema(){
 		}
 		type MainMutation {
 			recordUsers(name:String,Books:String): String
-			recordLibraryName(libraryName:String): String
+			recordLibraryName(name:String,quantity:Int): String
 			recordBook(title:String): String
 			recordDate(datetime:String): String
 			recordQuantity(quantity:Int): Int
@@ -30,7 +33,7 @@ function DefineSchema(){
 
 }
 function GetLibrary(){
-	return ["O nome do vento","Harry Potter e a camara secreta","things fall apart"]
+	return [{"name":"O nome do vento","quantity":3},{"name":"Harry Potter","quantity":10}]
 }
 function GetDate(){
 		return ["2009","2004","2011"]
