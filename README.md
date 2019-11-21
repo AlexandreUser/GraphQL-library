@@ -35,7 +35,7 @@ Install the dependencies and devDependencies and start the server.
 ```sh
 $ cd GraphQL-library
 $ npm install
-$ node test
+$ npm test
 ```
 
 ### Plugins
